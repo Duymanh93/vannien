@@ -116,7 +116,8 @@ if ( ! function_exists( 'elanding_setup' ) ) :
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
 			array(
-				'primary' => __( 'Primary', 'elanding' ),
+				'primary'      => __( 'Primary', 'elanding' ),
+				'account-menu' => __( 'Account Menu', 'elanding' ),
 			)
 		);
 

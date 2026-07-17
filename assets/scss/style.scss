@@ -5,10 +5,10 @@
 }
 body {
     font-family: system-ui, -apple-system, "Segoe UI", Roboto,
-        "Helvetica Neue", Arial, "Noto Sans",
-        "Liberation Sans", sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji",
-        "Segoe UI Symbol", "Noto Color Emoji";
+    "Helvetica Neue", Arial, "Noto Sans",
+    "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
 }
 @media (min-width: 1400px){
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
@@ -58,6 +58,11 @@ body {
 @media screen and (min-width:768px) {
     #cheng-header{
         clear: both;
+        .brand__logo{
+            img{
+                border-radius: 12px;
+            }
+        }
         .text-logo{
             color: #edcd86;
         }
@@ -82,6 +87,9 @@ body {
             .navbar{
                 display: block;
                 padding: 0px;
+                .header-inner{
+                    justify-content: space-between;
+                }
             }
             .language-switcher {
                 position: relative;
@@ -259,6 +267,70 @@ body {
                         visibility: visible;
                         pointer-events: auto;
                         transition-delay: 0s;
+                    }
+                }
+            }
+        }
+        // ── Account Menu ──────────────────────────────────────────
+        .header__account_menu {
+            display: flex;
+            align-items: center;
+            margin-left: 12px;
+        }
+        #account-menu {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            .menu-item {
+                display: inline-flex;
+                align-items: center;
+                margin-bottom: 0;
+
+                // Nút Đăng nhập — ghost / outline
+                &:first-child > a {
+                    display: inline-flex;
+                    align-items: center;
+                    padding: 8px 20px;
+                    border: 1.5px solid #D4AE35;
+                    border-radius: 8px;
+                    color: #0F172A;
+                    font-size: .875rem;
+                    font-weight: 600;
+                    text-decoration: none;
+                    background: transparent;
+                    transition: background .25s, color .25s, border-color .25s;
+
+                    &:hover {
+                        background: rgba(212, 174, 53, 0.08);
+                        color: #b8942a;
+                        border-color: #b8942a;
+                    }
+                }
+
+                // Nút Đăng ký — filled gold
+                &:last-child > a {
+                    display: inline-flex;
+                    align-items: center;
+                    padding: 8px 20px;
+                    border: 1.5px solid #D4AE35;
+                    border-radius: 8px;
+                    color: #fff;
+                    font-size: .875rem;
+                    font-weight: 700;
+                    text-decoration: none;
+                    background: #D4AE35;
+                    transition: background .25s, color .25s, box-shadow .25s;
+                    box-shadow: 0 2px 8px rgba(212, 174, 53, 0.35);
+
+                    &:hover {
+                        background: #b8942a;
+                        border-color: #b8942a;
+                        box-shadow: 0 4px 16px rgba(212, 174, 53, 0.5);
+                        color: #fff;
                     }
                 }
             }
@@ -1014,22 +1086,22 @@ a{
     height: 4px;
     background-color: transparent;
     transition: background-color 0.3s ease;
-  }
+}
 
-  &:hover {
+&:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 
     &::before {
       background-color: #28a745;
-    }
-
-    .service-title {
-      color: #ccaf6f;
-    }
   }
 
-  .service-icon-box {
+  .service-title {
+      color: #ccaf6f;
+  }
+}
+
+.service-icon-box {
     width: 54px;
     height: 54px;
     background-color: #fdf6e2;
@@ -1042,42 +1114,42 @@ a{
         max-width: 32px;
         max-height: 32px;
         object-fit: contain;
-      }
     }
-  }
+}
+}
 
-  .service-title {
+.service-title {
     color: #1f2937;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 22px;
     margin-top: 15px;
     transition: color 0.3s ease;
-  }
+}
 
-  .service-description {
+.service-description {
     color: #555555;
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
     line-height: 1.6;
-  }
+}
 
-  .service-card-footer {
+.service-card-footer {
     background-color: #f9fafb;
     border-top: 1px solid #f3f4f6;
-  }
+}
 
-  .service-features-list {
+.service-features-list {
     li {
       font-family: 'Roboto', sans-serif;
       font-size: 15px;
       color: #1f2937;
-    }
+  }
 
-    .checkmark {
+  .checkmark {
       color: #28a745;
       font-size: 14px;
-    }
   }
+}
 }
 

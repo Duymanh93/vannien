@@ -5,9 +5,9 @@ $classes = 'is-transparent-header';
 <div id="cheng-header" class="header-sticky">
     <div id="header" class="header <?php echo esc_attr($classes) ?>">
         <div class="header-main no-center menu-left">
-            <div class="navbar navbar-expand-lg  header-content container">
-                <div class="row flex-menu d-flex align-items-center">
-                    <div class="col-12 col-md-4">
+            <div class="navbar navbar-expand-lg header-content container">
+                <div class="header-inner flex-menu d-flex align-items-center">
+                    <div class="d-flex">
                         <div class="d-flex align-items-center">
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu_main" aria-controls="menu_main" aria-expanded="false" aria-label="Toggle navigation">
                                 <i class="fa fa-bars" aria-hidden="true"></i>
@@ -28,7 +28,7 @@ $classes = 'is-transparent-header';
                                 </a>
                             <?php endif; ?>
                             <span class="brand__text">
-                                <span class="brand__name">
+                                <span class="brand__name d-block">
                                     <?php echo esc_html(get_bloginfo('name')); ?>
                                 </span>
                                 <span class="brand__tag">
@@ -37,7 +37,7 @@ $classes = 'is-transparent-header';
                             </span>
                         </div>
                     </div>
-                    <div class="header__center d-flex align-items-center col-12 col-md-8">
+                    <div class="header__center d-flex align-items-center">
                         <div class="navbar-collapse collapse" id="menu_main">
                             <?php
                             if (has_nav_menu('primary')) {
@@ -51,39 +51,53 @@ $classes = 'is-transparent-header';
                             }
                             ?>
                         </div>
-                        <?php
-                        if ( function_exists('pll_the_languages') ) {
-                            $languages = pll_the_languages([
-                                'raw' => 1
-                            ]);
-                            echo '<div class="language-switcher">';
-                            foreach ($languages as $lang) {
-                                if ($lang['current_lang']) {
-                                    echo '<button class="language-current" type="button">';
-                                    echo '<img src="'.esc_url($lang['flag']).'" alt="'.esc_attr($lang['name']).'">';
-                                    echo '<span>'.strtoupper($lang['slug']).'</span>';
-                                    echo '<i class="arrow"></i>';
-                                    echo '</button>';
-                                }
-                            }
-                            echo '<ul class="language-dropdown">';
-                            foreach ($languages as $lang) {
-                                if($lang['current_lang']) continue;
-
-                                echo '<li>';
-                                echo '<a href="'.esc_url($lang['url']).'">';
+                    </div>
+                    <div class="header-actions d-flex align-items-center">
+                       <?php
+                       if ( function_exists('pll_the_languages') ) {
+                        $languages = pll_the_languages([
+                            'raw' => 1
+                        ]);
+                        echo '<div class="language-switcher">';
+                        foreach ($languages as $lang) {
+                            if ($lang['current_lang']) {
+                                echo '<button class="language-current" type="button">';
                                 echo '<img src="'.esc_url($lang['flag']).'" alt="'.esc_attr($lang['name']).'">';
                                 echo '<span>'.strtoupper($lang['slug']).'</span>';
-                                echo '</a>';
-                                echo '</li>';
+                                echo '<i class="arrow"></i>';
+                                echo '</button>';
                             }
-                            echo '</ul>';
-                            echo '</div>';
                         }
-                        ?>                    
-                    </div>
-                </div> 
+                        echo '<ul class="language-dropdown">';
+                        foreach ($languages as $lang) {
+                            if($lang['current_lang']) continue;
+
+                            echo '<li>';
+                            echo '<a href="'.esc_url($lang['url']).'">';
+                            echo '<img src="'.esc_url($lang['flag']).'" alt="'.esc_attr($lang['name']).'">';
+                            echo '<span>'.strtoupper($lang['slug']).'</span>';
+                            echo '</a>';
+                            echo '</li>';
+                        }
+                        echo '</ul>';
+                        echo '</div>';
+                    }
+                    ?>
+                    <?php
+                    if (has_nav_menu('account-menu')) {
+                        wp_nav_menu([
+                            'theme_location'  => 'account-menu',
+                            'container'       => 'div',
+                            'container_class' => 'header__account_menu',
+                            'items_wrap'      => '<ul id="account-menu" class="%2$s navbar-nav header-item list-unstyled account-menu">%3$s</ul>',
+                            'walker'          => new LandingMenuWalker(),
+                        ]);
+                    }
+                    ?>
+
+                </div>
             </div> 
-        </div>
+        </div> 
     </div>
+</div>
 </div>
