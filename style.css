@@ -1,0 +1,30 @@
+/*
+Theme Name: Vannien1
+Theme URI: https://duongtambeautyspa.com
+Author: Elanding
+Author URI: https://duongtambeautyspa.com
+Description: wordpress, landing, blog
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: landing, quickfood, blog, black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, thoai-ngo, theme-options, translation-ready, accessibility-ready
+Text Domain: elanding
+Version: 1.0.0
+*/
+
+/* 
+Elementor */
+@media (min-width: 992px){
+   
+    .checklist-full.checklist-right .elementor-icon-list-items li {
+        text-align: right;
+        width: 100%;
+        display: inline-block;
+    }
+    .checklist-full .elementor-icon-list-items li {
+        text-align: left;
+        width: 100%;
+    }
+}
+.eld-ovefow-hidden{
+    overflow: hidden;
+}

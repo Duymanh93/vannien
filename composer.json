@@ -1,0 +1,19 @@
+{
+    "name": "lenovo/vannien",
+    "description": "This is vannien theme by Duymanh",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Duymanh",
+            "email": "Duymanh.vnkingnet@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4":{
+            "ChengChivas\\" : "./inc"
+        }
+    }
+}
