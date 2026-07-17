@@ -12,16 +12,18 @@ if(!class_exists('ELElementor')) {
             add_action('elementor/controls/controls_registered', [$this, '_register_controls']);
             $this->_register_element_action_admin();
             add_action('init', [$this, 'add_to_elementor'], 1);
+            add_filter('elementor/post_types', [$this, 'add_post_type_support']);
         }
     
         public function add_to_elementor()
         {
-    
             $cpt_support = get_option('elementor_cpt_support', []);
             if (empty($cpt_support)) {
-                $cpt_support = ['post', 'page'];
+                $cpt_support = ['post', 'page', 'footer'];
             } else {
-              
+                if (!in_array('footer', $cpt_support)) {
+                    $cpt_support[] = 'footer';
+                }
             }
             update_option('elementor_cpt_support', $cpt_support);
         }
@@ -118,13 +120,19 @@ if(!class_exists('ELElementor')) {
                 }
             }
         }
+        public function add_post_type_support($post_types)
+        {
+            if (!in_array('footer', $post_types)) {
+                $post_types[] = 'footer';
+            }
+            return $post_types;
+        }
     
         public static function instance() {
             if ( is_null( self::$_instance ) ) {
                 self::$_instance = new self();
             }
             return self::$_instance;
-    
         }
     
         public static function not()

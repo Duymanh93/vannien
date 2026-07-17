@@ -3,7 +3,6 @@ get_header();
 if (have_posts()) { ?>
     <?php echo apply_filters('eld_single_template', elanding_load_template('common/banner')); ?>
     <div class="content-wrapper">
-
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-12">
@@ -17,7 +16,5 @@ if (have_posts()) { ?>
             </div>
         </div>
     </div>
-
 <?php }
-
 get_footer();

@@ -1,3 +1,34 @@
+<?php
+$footer_args = array(
+    'post_type'      => 'footer',
+    'posts_per_page' => 1,
+    'post_status'    => 'publish',
+);
+$footer_query = new WP_Query( $footer_args );
+
+if ( ! $footer_query->have_posts() ) {
+    $footer_args['suppress_filters'] = true;
+    $footer_args['lang']             = ''; // For Polylang
+    $footer_query = new WP_Query( $footer_args );
+}
+$has_footer = false;
+
+if ( $footer_query->have_posts() ) {
+    while ( $footer_query->have_posts() ) {
+        $footer_query->the_post();
+        $footer_id = get_the_ID();
+        if ( class_exists( 'Elementor\Plugin' ) && \Elementor\Plugin::$instance->documents->get( $footer_id )->is_built_with_elementor() ) {
+            echo \Elementor\Plugin::$instance->frontend->get_builder_content( $footer_id );
+        } else {
+            the_content();
+        }
+    }
+    wp_reset_postdata();
+    $has_footer = true;
+}
+
+if ( ! $has_footer ) {
+    ?>
     <div class="footer">
         <div class="container">
             <div class="row">
@@ -8,15 +39,15 @@
                 </div>
                 <div class="col-12 col-md-9">
                     <?php
-                        $name_company=eld_get_setting('name_company', '');
-                        $link_facebook=eld_get_setting('link_facebook', '');
-                        $link_twitter=eld_get_setting('link_twitter', '');
-                        $link_instagram=eld_get_setting('link_instagram', '');
-                        $number_tel=eld_get_setting('number_tel', '');
-                        $number_hotline=eld_get_setting('number_hotline', '');
-                        $gmail_contact=eld_get_setting('gmail_contact', '');
+                    $name_company=eld_get_setting('name_company', '');
+                    $link_facebook=eld_get_setting('link_facebook', '');
+                    $link_twitter=eld_get_setting('link_twitter', '');
+                    $link_instagram=eld_get_setting('link_instagram', '');
+                    $number_tel=eld_get_setting('number_tel', '');
+                    $number_hotline=eld_get_setting('number_hotline', '');
+                    $gmail_contact=eld_get_setting('gmail_contact', '');
                     ?>
-                     <div class="company-name">
+                    <div class="company-name">
                         <h3 class="name">
                             <?php echo esc_html($name_company);?>
                         </h3>
@@ -50,27 +81,27 @@
                                     </li>
                                     <li class="list-inline-item">
                                         <a href="<?php echo esc_url($link_instagram);?>">
-                                        <i class="fa fa-instagram"></i>
+                                            <i class="fa fa-instagram"></i>
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
                                         <a href="<?php echo esc_url($link_twitter);?>">
-                                        <i class="fa fa-twitter"></i>
+                                            <i class="fa fa-twitter"></i>
                                         </a>
                                     </li>
                                 </ul>
                                 
                             </div>
                         </div>
- 
+                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <a href="#top" class="back_to_top"><img src="<?php echo get_template_directory_uri();?>/assets/images/back_to_top.png" alt="back to top"></a>
-
-    <?php wp_footer();?>
+<?php } ?>
+<a href="#top" class="back_to_top"><img src="<?php echo get_template_directory_uri();?>/assets/images/back_to_top.png" alt="back to top"></a>
+<?php wp_footer();?>
 </body>
 
 </html>

@@ -13,7 +13,6 @@ $classes = 'is-transparent-header';
                                 <i class="fa fa-bars" aria-hidden="true"></i>
                             </button>
                         </div>
-
                         <div class="brand__logo d-flex">
                             <?php
                             $custom_logo_id = get_theme_mod('custom_logo');
@@ -28,7 +27,6 @@ $classes = 'is-transparent-header';
                                     <h1 class="text-logo"><?php echo esc_html(get_bloginfo('name')); ?></h1>
                                 </a>
                             <?php endif; ?>
-
                             <span class="brand__text">
                                 <span class="brand__name">
                                     <?php echo esc_html(get_bloginfo('name')); ?>
