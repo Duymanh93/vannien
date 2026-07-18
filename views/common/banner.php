@@ -10,7 +10,3 @@ if (!empty($background_image)) {
 }
 
 ?>
-<div class="page-thumbnail <?php echo esc_attr($class); ?>" style="background-color: <?php echo esc_attr($background_color); ?>;
-        background-image: url(<?php echo esc_url($background_image);?>)">
-    <div class="page-header"> </div>
-</div>

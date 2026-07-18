@@ -26,6 +26,41 @@ if(!class_exists('Elementor_Services_Widget')){
 		}
 	
 		protected function _register_controls() {
+
+			// ── Section Heading ──────────────────────────────────────────────
+			$this->start_controls_section(
+				'heading_section',
+				[
+					'label' => esc_html__( 'Section Heading', 'elanding'),
+					'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
+				]
+			);
+
+			$this->add_control(
+				'section_title',
+				[
+					'label'       => esc_html__( 'Title', 'elanding'),
+					'type'        => Controls_Manager::TEXT,
+					'placeholder' => esc_html__( 'Nhập tiêu đề...', 'elanding'),
+					'default'     => '',
+					'label_block' => true,
+				]
+			);
+
+			$this->add_control(
+				'section_description',
+				[
+					'label'       => esc_html__( 'Mô tả', 'elanding'),
+					'type'        => Controls_Manager::TEXTAREA,
+					'placeholder' => esc_html__( 'Nhập mô tả...', 'elanding'),
+					'default'     => '',
+					'rows'        => 4,
+				]
+			);
+
+			$this->end_controls_section();
+
+			// ── Query Settings ───────────────────────────────────────────────
 			$this->start_controls_section(
 				'content_section',
 				[

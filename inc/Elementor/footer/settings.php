@@ -4,7 +4,8 @@ use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 use Elementor\Scheme_Typography;
 use Elementor\Utils;
-if(!class_exists('Elementor_Footer_Widget')){
+// Widget Footer đã bị vô hiệu hoá — không hiển thị trong Elementor panel
+if(false && !class_exists('Elementor_Footer_Widget')){
 	class Elementor_Footer_Widget extends Elementor\Widget_Base {
 
 		public function __construct($data = [], $args = [])

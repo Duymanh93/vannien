@@ -9,6 +9,7 @@ body {
     "Liberation Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 14px;
 }
 @media (min-width: 1400px){
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
@@ -74,9 +75,19 @@ body {
                 }
                 .brand__text{
                    padding-left: 12px;
-               }
-           }
-           .header-main{
+                   .brand__name{
+                    font-size: 1rem;
+                    font-weight: 700;
+                }
+                .brand__tag {
+                    font-size: .72rem;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    letter-spacing: .08em;
+                }
+            }
+        }
+        .header-main{
             position: sticky;
             top: 0;
             z-index: 50;
@@ -107,9 +118,8 @@ body {
                 align-items: center;
                 gap: 8px;
                 background: transparent;
-                border: 1px solid #e5e5e5;
-                border-radius: 30px;
-                padding: 8px 14px;
+                border: none;
+                padding: 8px 0px;
                 cursor: pointer;
                 img {
                     width: 20px;
@@ -289,13 +299,10 @@ body {
                 display: inline-flex;
                 align-items: center;
                 margin-bottom: 0;
-
-                // Nút Đăng nhập — ghost / outline
                 &:first-child > a {
                     display: inline-flex;
                     align-items: center;
-                    padding: 8px 20px;
-                    border: 1.5px solid #D4AE35;
+                    padding: 10px 20px;
                     border-radius: 8px;
                     color: #0F172A;
                     font-size: .875rem;
@@ -303,34 +310,27 @@ body {
                     text-decoration: none;
                     background: transparent;
                     transition: background .25s, color .25s, border-color .25s;
-
                     &:hover {
-                        background: rgba(212, 174, 53, 0.08);
-                        color: #b8942a;
-                        border-color: #b8942a;
+                        background: rgba(50, 205, 50, 0.1);
                     }
                 }
-
-                // Nút Đăng ký — filled gold
                 &:last-child > a {
                     display: inline-flex;
                     align-items: center;
-                    padding: 8px 20px;
-                    border: 1.5px solid #D4AE35;
+                    padding: 9px 20px;
+                    border: 1px solid #D4AE35;
                     border-radius: 8px;
-                    color: #fff;
+                    color: rgb(17, 24, 39);
                     font-size: .875rem;
-                    font-weight: 700;
+                    font-weight: 600;
                     text-decoration: none;
                     background: #D4AE35;
                     transition: background .25s, color .25s, box-shadow .25s;
                     box-shadow: 0 2px 8px rgba(212, 174, 53, 0.35);
-
                     &:hover {
                         background: #b8942a;
                         border-color: #b8942a;
                         box-shadow: 0 4px 16px rgba(212, 174, 53, 0.5);
-                        color: #fff;
                     }
                 }
             }
@@ -373,14 +373,57 @@ body {
         }
     }
 }
-.admin-bar{
-    #cheng-header.header-sticky.is-sticky #header{
+}
 
+// banner top homepage
+.banner-top{
+    position: relative;
+    &:after{
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
+        pointer-events: none;
+        top: 0;
+        right: 0;
+        width: 500px;
+        height: 500px;
+        background: rgba(212, 174, 53, 0.1);
+        transform: translate(33%, -50%);
+    }
+    &:before{
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
+        pointer-events: none;
+        bottom: 0;
+        left: 0;
+        width: 600px;
+        height: 600px;
+        background: rgba(50, 206, 50, 0.1);
+        transform: translate(-25%, 33%);
+    }
+    img{
+        border-radius: 16px!important;
+        object-fit: cover;
+        margin: 0 auto 1.5rem;
+        box-shadow: 0 0 0 4px rgb(255, 255, 255),
+        0 20px 45px rgba(15, 23, 42, 0.12)!important;
+    }
+    span.elementor-heading-title{
+        display: inline-block;
+        padding: 10px 16px 8px 16px;
+        border-radius: 999px;
+        background: var(--primary-soft);
+        //color: var(--primary);
+        font-size: .875rem;
+        font-weight: 700;
+        letter-spacing: .03em;
+        text-transform: uppercase;
+        border: 1px solid red;
     }
 }
-}
-
-
 //Element
 #slider-home{
     .slide-item{
@@ -524,36 +567,6 @@ body {
         }
     }
 }
-.project__slider-element{
-    img{
-        width: 100%;
-    }
-    .item-project{
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    .fa-chevron-left{
-        position: absolute;
-        transform: translateY(-50%);
-        top: 50%;
-        z-index: 9;
-        font-size: 40px;
-        color: #ccaf6f;
-        left: -35px;
-        cursor: pointer;
-    }
-    .fa-chevron-right{
-        position: absolute;
-        transform: translateY(-50%);
-        top: 50%;
-        z-index: 9;
-        font-size: 40px;
-        color: #ccaf6f;
-        right: -35px;
-        cursor: pointer;
-    }
-    
-}
 .back_to_top {
     display: none;
     color: #fff;
@@ -686,13 +699,6 @@ body {
     }
 }
 .content-wrapper{
-    padding-top: 70px;
-    padding-bottom: 70px;
-    @media screen and (max-width:767px) {
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-    
     .page-header__title{
         font-family: Montserrat;
         font-size: 30px;
@@ -1141,8 +1147,7 @@ a{
 
 .service-features-list {
     li {
-      font-family: 'Roboto', sans-serif;
-      font-size: 15px;
+      font-weight: 500;
       color: #1f2937;
   }
 
