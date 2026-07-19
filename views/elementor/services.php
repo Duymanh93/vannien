@@ -5,6 +5,8 @@ $orderby             = isset($orderby)             ? $orderby                : '
 $order               = isset($order)               ? $order                  : 'DESC';
 $section_title       = isset($section_title)       ? $section_title          : '';
 $section_description = isset($section_description) ? $section_description    : '';
+$show_title          = isset($show_title)          ? $show_title             : 'yes';
+$show_description    = isset($show_description)    ? $show_description       : 'yes';
 
 $args = array(
     'post_type'      => 'service',
@@ -18,12 +20,15 @@ $query = new WP_Query($args);
 
 if ($query->have_posts()) : ?>
     <div class="services-list-wrapper">
-        <?php if (!empty($section_title) || !empty($section_description)) : ?>
+        <?php
+        $display_title = ( 'yes' === $show_title && !empty($section_title) );
+        $display_desc  = ( 'yes' === $show_description && !empty($section_description) );
+        if ( $display_title || $display_desc ) : ?>
         <div class="services-section-heading text-center mb-5">
-            <?php if (!empty($section_title)) : ?>
+            <?php if ( $display_title ) : ?>
                 <h2 class="services-section-title"><?php echo esc_html($section_title); ?></h2>
             <?php endif; ?>
-            <?php if (!empty($section_description)) : ?>
+            <?php if ( $display_desc ) : ?>
                 <p class="services-section-description"><?php echo esc_html($section_description); ?></p>
             <?php endif; ?>
         </div>
@@ -38,7 +43,7 @@ if ($query->have_posts()) : ?>
                 <div class="service-card h-100 d-flex flex-column">
                     <div class="service-card-body p-4 flex-grow-1">
                         <?php if (!empty($service_icon)) : ?>
-                            <div class="service-icon-box img-icon mb-3 d-flex align-items-center justify-content-center">
+                            <div class="service-icon-box img-icon d-flex align-items-center justify-content-center">
                                 <img src="<?php echo esc_url($service_icon); ?>" alt="<?php the_title(); ?>" class="img-fluid" />
                             </div>
                         <?php elseif (has_post_thumbnail()) : ?>
@@ -47,7 +52,7 @@ if ($query->have_posts()) : ?>
                             </div>
                         <?php endif; ?>
 
-                        <h3 class="service-title mb-2">
+                        <h3 class="service-title mb-4">
                             <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php the_title_attribute(); ?>">
                                 <?php the_title(); ?>
                             </a>

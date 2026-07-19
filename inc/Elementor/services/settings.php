@@ -37,13 +37,39 @@ if(!class_exists('Elementor_Services_Widget')){
 			);
 
 			$this->add_control(
+				'show_title',
+				[
+					'label'        => esc_html__( 'Hiển thị Tiêu đề', 'elanding'),
+					'type'         => Controls_Manager::SWITCHER,
+					'label_on'     => esc_html__( 'Bật', 'elanding'),
+					'label_off'    => esc_html__( 'Tắt', 'elanding'),
+					'return_value' => 'yes',
+					'default'      => 'yes',
+				]
+			);
+
+			$this->add_control(
 				'section_title',
 				[
-					'label'       => esc_html__( 'Title', 'elanding'),
+					'label'       => esc_html__( 'Tiêu đề', 'elanding'),
 					'type'        => Controls_Manager::TEXT,
 					'placeholder' => esc_html__( 'Nhập tiêu đề...', 'elanding'),
 					'default'     => '',
 					'label_block' => true,
+					'condition'   => [ 'show_title' => 'yes' ],
+				]
+			);
+
+			$this->add_control(
+				'show_description',
+				[
+					'label'        => esc_html__( 'Hiển thị Mô tả', 'elanding'),
+					'type'         => Controls_Manager::SWITCHER,
+					'label_on'     => esc_html__( 'Bật', 'elanding'),
+					'label_off'    => esc_html__( 'Tắt', 'elanding'),
+					'return_value' => 'yes',
+					'default'      => 'yes',
+					'separator'    => 'before',
 				]
 			);
 
@@ -55,6 +81,7 @@ if(!class_exists('Elementor_Services_Widget')){
 					'placeholder' => esc_html__( 'Nhập mô tả...', 'elanding'),
 					'default'     => '',
 					'rows'        => 4,
+					'condition'   => [ 'show_description' => 'yes' ],
 				]
 			);
 
