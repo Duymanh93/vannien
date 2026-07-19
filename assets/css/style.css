@@ -43,94 +43,62 @@
 
 /* line 49, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 body {
+  position: relative;
+  overflow-x: hidden;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 14px;
 }
 
 @media (min-width: 1400px) {
-  /* line 58, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 60, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
     max-width: 1220px;
   }
 }
 
-@media screen and (max-width: 767px) {
-  /* line 65, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-  #cheng-header .header__center .navbar-collapse {
-    background: #64070b;
-    padding: 15px;
-  }
-  /* line 71, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-  #cheng-header .navbar-toggler:focus, #cheng-header .navbar-toggler:active {
-    border: none;
-    outline: none;
-    box-shadow: none;
-  }
-  /* line 77, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-  #cheng-header .header-main {
-    padding: 15px;
-  }
-  /* line 79, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-  #cheng-header .header-main .navbar {
-    padding: 0px;
-    display: inline-block;
-  }
-  /* line 84, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-  #cheng-header #primary-menu {
-    margin: 0px;
-  }
-  /* line 87, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-  #cheng-header #primary-menu li a {
-    font-family: Montserrat;
-    font-size: 16px;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.2;
-    letter-spacing: normal;
-    text-align: left;
-    color: #ccaf6f;
-    text-decoration: none;
-  }
-}
-
 @media screen and (min-width: 768px) {
-  /* line 103, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 65, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header {
     clear: both;
   }
-  /* line 106, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 68, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header .brand__logo img {
     border-radius: 12px;
   }
-  /* line 110, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 72, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header .text-logo {
     color: #edcd86;
   }
-  /* line 113, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 75, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header {
     background: transparent;
   }
-  /* line 116, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 77, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  #cheng-header #header .header-content {
+    max-width: 1220px;
+    margin: 0px auto;
+  }
+  /* line 80, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header .header-content h1 {
     margin: 0px;
   }
-  /* line 119, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 83, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header .header-content .brand__text {
     padding-left: 12px;
   }
-  /* line 121, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 85, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header .header-content .brand__text .brand__name {
     font-size: 1rem;
     font-weight: 700;
   }
-  /* line 125, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 89, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header .header-content .brand__text .brand__tag {
     font-size: .72rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: .08em;
   }
-  /* line 133, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 97, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header .header-main {
     position: sticky;
     top: 0;
@@ -140,27 +108,27 @@ body {
     background: rgba(249, 250, 251, 0.85);
     backdrop-filter: saturate(180%) blur(12px);
   }
-  /* line 141, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 105, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header .header-main .navbar {
     display: block;
-    padding: 0px;
+    padding: 10px;
   }
-  /* line 144, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 108, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header .header-main .navbar .header-inner {
     justify-content: space-between;
   }
-  /* line 148, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 112, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header .header-main .language-switcher {
     position: relative;
     display: inline-block;
   }
-  /* line 152, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 116, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header .header-main .language-switcher:hover .language-dropdown {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
   }
-  /* line 159, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 123, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header .header-main .language-current {
     display: flex;
     align-items: center;
@@ -170,18 +138,18 @@ body {
     padding: 8px 0px;
     cursor: pointer;
   }
-  /* line 167, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 131, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header .header-main .language-current img {
     width: 20px;
     height: 20px;
     border-radius: 50%;
   }
-  /* line 172, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 136, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header .header-main .language-current span {
     font-size: 14px;
     font-weight: 600;
   }
-  /* line 176, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 140, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header .header-main .language-current .arrow {
     width: 8px;
     height: 8px;
@@ -191,7 +159,7 @@ body {
     transition: .3s;
     margin-top: -3px;
   }
-  /* line 186, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 150, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header .header-main .language-dropdown {
     position: absolute;
     top: calc(100% + 10px);
@@ -208,7 +176,7 @@ body {
     transition: .25s;
     z-index: 999;
   }
-  /* line 202, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 166, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header .header-main .language-dropdown li a {
     display: flex;
     align-items: center;
@@ -218,39 +186,42 @@ body {
     text-decoration: none;
     transition: .25s;
   }
-  /* line 210, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 174, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header .header-main .language-dropdown li a:hover {
     background: #f7f7f7;
     color: var(--primary-color);
   }
-  /* line 214, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 178, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header .header-main .language-dropdown li a img {
     width: 20px;
     height: 20px;
     border-radius: 50%;
   }
-  /* line 219, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 183, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header .header-main .language-dropdown li a span {
     font-size: 14px;
     font-weight: 500;
   }
-  /* line 228, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+}
+
+@media screen and (min-width: 768px) and (min-width: 992px) {
+  /* line 193, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header #primary-menu {
     display: flex;
     height: 100%;
     margin: 0px;
   }
-  /* line 232, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 197, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header #primary-menu .menu-item:last-child {
     padding-left: 0;
   }
-  /* line 235, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 200, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header #primary-menu > .menu-item {
     padding-top: 24px;
     padding-bottom: 24px;
     margin-bottom: 0px;
   }
-  /* line 240, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 205, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header #primary-menu .menu-item {
     float: left;
     display: inline-flex;
@@ -259,11 +230,11 @@ body {
     transition: all .3s ease;
     padding-right: 5px;
   }
-  /* line 248, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 213, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header #primary-menu .menu-item:hover .dropdown-icon {
     color: #FFF;
   }
-  /* line 252, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 217, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header #primary-menu .menu-item > a {
     position: relative;
     display: flex;
@@ -277,19 +248,19 @@ body {
     font-size: .875rem;
     font-weight: 700;
   }
-  /* line 264, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 229, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header #primary-menu .menu-item > a:hover {
     color: #32CD32;
     background: rgba(50, 205, 50, 0.1);
   }
-  /* line 270, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 235, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header #primary-menu .menu-item.current-menu-item > a {
     font-weight: 900;
     color: #D4AE35;
     background: #d4ae351a;
     position: relative;
   }
-  /* line 275, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 240, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header #primary-menu .menu-item.current-menu-item > a:after {
     content: "";
     position: absolute;
@@ -301,13 +272,13 @@ body {
     background: #D4AE35;
     border-radius: 4px 4px 0 0;
   }
-  /* line 289, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 254, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header #primary-menu .dropdown-icon {
     color: #edcd86;
     font-size: 14px;
     margin-left: 4px;
   }
-  /* line 294, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 259, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header #primary-menu .menu-item.menu-item-has-children .menu-dropdown {
     position: absolute;
     top: 100%;
@@ -322,32 +293,35 @@ body {
     transition: opacity .25s ease .1s,visibility .25s ease .1s;
     padding: 15px;
   }
-  /* line 308, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 273, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header #primary-menu .menu-item.menu-item-has-children .menu-dropdown li:hover a {
     color: #222222;
   }
-  /* line 313, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 278, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header #primary-menu .menu-item.menu-item-has-children {
     position: relative;
   }
-  /* line 315, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 280, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header #primary-menu .menu-item.menu-item-has-children:hover {
     transition: cubic-bezier(0.25, 0.1, 0.32, 0.83) 0.3s;
   }
-  /* line 317, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 282, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header #primary-menu .menu-item.menu-item-has-children:hover .menu-dropdown {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
     transition-delay: 0s;
   }
-  /* line 327, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+}
+
+@media screen and (min-width: 768px) {
+  /* line 293, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header .header__account_menu {
     display: flex;
     align-items: center;
     margin-left: 12px;
   }
-  /* line 332, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 298, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header #account-menu {
     display: flex;
     align-items: center;
@@ -355,14 +329,15 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
+    flex-direction: row;
   }
-  /* line 340, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 306, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header #account-menu .menu-item {
     display: inline-flex;
     align-items: center;
     margin-bottom: 0;
   }
-  /* line 344, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 310, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header #account-menu .menu-item:first-child > a {
     display: inline-flex;
     align-items: center;
@@ -375,11 +350,11 @@ body {
     background: transparent;
     transition: background .25s, color .25s, border-color .25s;
   }
-  /* line 355, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 321, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header #account-menu .menu-item:first-child > a:hover {
     background: rgba(50, 205, 50, 0.1);
   }
-  /* line 359, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 325, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header #account-menu .menu-item:last-child > a {
     display: inline-flex;
     align-items: center;
@@ -394,17 +369,17 @@ body {
     transition: background .25s, color .25s, box-shadow .25s;
     box-shadow: 0 2px 8px rgba(212, 174, 53, 0.35);
   }
-  /* line 372, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 338, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header #header #account-menu .menu-item:last-child > a:hover {
     background: #b8942a;
     border-color: #b8942a;
     box-shadow: 0 4px 16px rgba(212, 174, 53, 0.5);
   }
-  /* line 382, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 348, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header.header-sticky.is-sticky .text-logo {
     color: #edcd86;
   }
-  /* line 385, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 351, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header.header-sticky.is-sticky #header {
     position: fixed;
     top: 0;
@@ -414,27 +389,27 @@ body {
     z-index: 99;
     background: #fff;
   }
-  /* line 394, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 360, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header.header-sticky.is-sticky #header .flex-menu {
     align-items: center !important;
   }
-  /* line 402, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 368, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header.header-sticky.is-sticky #header #primary-menu .menu-item > a:hover {
     color: #000;
   }
-  /* line 407, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 373, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   #cheng-header.header-sticky.is-sticky #header #primary-menu .menu-item.current-menu-item > a {
     font-weight: 900;
     color: #000;
   }
 }
 
-/* line 421, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 387, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .banner-top {
   position: relative;
 }
 
-/* line 423, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 389, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .banner-top:after {
   content: "";
   position: absolute;
@@ -449,7 +424,7 @@ body {
   transform: translate(33%, -50%);
 }
 
-/* line 436, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 402, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .banner-top:before {
   content: "";
   position: absolute;
@@ -464,7 +439,7 @@ body {
   transform: translate(-25%, 33%);
 }
 
-/* line 449, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 415, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .banner-top img {
   border-radius: 16px !important;
   object-fit: cover;
@@ -472,7 +447,7 @@ body {
   box-shadow: 0 0 0 4px white, 0 20px 45px rgba(15, 23, 42, 0.12) !important;
 }
 
-/* line 456, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 422, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .banner-top span.elementor-heading-title {
   display: inline-block;
   padding: 10px 16px 8px 16px;
@@ -486,7 +461,7 @@ body {
   border: 1px solid var(--primary-border);
 }
 
-/* line 471, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 437, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .bottom-left .elementor-button-wrapper a {
   background: var(--primary);
   color: var(--primary-foreground) !important;
@@ -505,12 +480,12 @@ body {
   text-align: center;
 }
 
-/* line 487, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 453, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .bottom-left .elementor-button-wrapper a:hover {
   background: var(--primary-90);
 }
 
-/* line 495, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 461, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .bottom-right .elementor-button-wrapper a {
   display: inline-flex;
   align-items: center;
@@ -528,190 +503,14 @@ body {
   color: var(--foreground);
 }
 
-/* line 510, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 476, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .bottom-right .elementor-button-wrapper a:hover {
   background: var(--secondary-soft);
   color: var(--secondary);
   border-color: rgba(50, 206, 50, 0.3);
 }
 
-/* line 520, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-#slider-home .slide-item {
-  padding-top: 542px;
-  padding-bottom: 130px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-}
-
-@media screen and (max-width: 767px) {
-  /* line 520, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-  #slider-home .slide-item {
-    padding-top: 200px;
-    padding-bottom: 100px;
-  }
-}
-
-/* line 531, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-#slider-home .slide-item:after {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to bottom, #64070b, rgba(203, 6, 15, 0.17) 87%);
-  z-index: 1;
-}
-
-/* line 541, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-#slider-home .slide-item .slide-content {
-  z-index: 2;
-  position: relative;
-}
-
-@media screen and (max-width: 767px) {
-  /* line 541, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-  #slider-home .slide-item .slide-content {
-    padding-left: 30px;
-  }
-}
-
-/* line 547, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-#slider-home .slide-item .slide-content .slide-short-description {
-  font-family: Roboto;
-  font-size: 42px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.17;
-  letter-spacing: normal;
-  text-align: right;
-  color: #fff;
-  float: right;
-  max-width: 641px;
-}
-
-@media screen and (max-width: 767px) {
-  /* line 547, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-  #slider-home .slide-item .slide-content .slide-short-description {
-    font-size: 24px;
-    margin-bottom: 30px;
-    text-align: left;
-  }
-}
-
-/* line 566, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-#slider-home .slide-item .c-button-link {
-  display: inline-block;
-  width: 100%;
-  margin-top: 149px;
-}
-
-@media screen and (max-width: 767px) {
-  /* line 566, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-  #slider-home .slide-item .c-button-link {
-    margin-top: 0px;
-  }
-}
-
-/* line 575, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-#slider-home .slide-item a.slide-link {
-  padding: 20px 71px 20px 73px;
-  background-color: #ccaf6f;
-  border-radius: 50px;
-  color: #FFF;
-  font-family: Montserrat;
-  font-size: 24px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.21;
-  letter-spacing: normal;
-  text-align: left;
-  color: #fff;
-  float: right;
-}
-
-/* line 591, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-#slider-home .slide-item a.slide-link:hover {
-  background-color: #786846;
-}
-
-@media screen and (max-width: 767px) {
-  /* line 575, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-  #slider-home .slide-item a.slide-link {
-    margin-top: 0px;
-    float: none;
-    text-align: center;
-    padding: 20px;
-    font-size: 16px;
-  }
-}
-
-/* line 603, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-#slider-home .fa-chevron-left {
-  position: absolute;
-  transform: translateY(-50%);
-  top: 50%;
-  z-index: 9;
-  font-size: 40px;
-  color: #FFF;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s;
-  left: 0px;
-  cursor: pointer;
-}
-
-/* line 616, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-#slider-home .fa-chevron-right {
-  position: absolute;
-  transform: translateY(-50%);
-  top: 50%;
-  z-index: 9;
-  font-size: 40px;
-  color: #FFF;
-  transition: all 0.3s;
-  opacity: 0;
-  visibility: hidden;
-  right: 0px;
-  cursor: pointer;
-}
-
-/* line 630, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-#slider-home:hover .fa-chevron-left {
-  left: 100px;
-  opacity: 1;
-  visibility: visible;
-}
-
-/* line 635, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-#slider-home:hover .fa-chevron-right {
-  right: 100px;
-  opacity: 1;
-  visibility: visible;
-}
-
-/* line 641, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-#slider-home .slick-dots {
-  bottom: 36px;
-}
-
-/* line 645, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-#slider-home .slick-dots li button::before {
-  font-size: 13px;
-  color: #FFF;
-  opacity: 1;
-}
-
-/* line 653, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-#slider-home .slick-dots li.slick-active button::before {
-  color: #dea424;
-}
-
-/* line 661, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 485, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .back_to_top {
   display: none;
   color: #fff;
@@ -724,21 +523,20 @@ body {
   transition: opacity 0.3s ease;
 }
 
-/* line 673, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 497, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .back_to_top:hover {
   opacity: 0.5;
 }
 
-/* line 676, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 500, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .footer {
   padding-block: 4rem 2rem;
   background: rgba(242, 245, 247, 0.5);
   border-top: 1px solid #e0e7f0;
 }
 
-/* line 681, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 505, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .footer .company-name h3.name {
-  font-family: Montserrat;
   font-size: 20px;
   font-weight: bold;
   font-stretch: normal;
@@ -749,15 +547,14 @@ body {
   color: #ccaf6f;
 }
 
-/* line 692, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 515, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .footer .company-name .infor-contact {
   margin-top: 24px;
   margin-bottom: 45px;
 }
 
-/* line 695, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 518, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .footer .company-name .infor-contact h3 {
-  font-family: Montserrat;
   font-size: 16px;
   font-weight: bold;
   font-stretch: normal;
@@ -767,12 +564,12 @@ body {
   text-align: left;
 }
 
-/* line 704, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 526, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .footer .company-name .infor-contact h3 span {
   font-weight: normal;
 }
 
-/* line 709, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 531, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .footer .company-name h3.connect-social {
   font-size: 16px;
   font-weight: 500;
@@ -783,7 +580,7 @@ body {
   color: #fff;
 }
 
-/* line 719, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 541, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .footer .company-name ul.ccv-social a {
   font-size: 16px;
   font-weight: 500;
@@ -794,12 +591,12 @@ body {
   color: #fff;
 }
 
-/* line 727, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 549, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .footer .company-name ul.ccv-social a:hover {
   color: #ccaf6f;
 }
 
-/* line 732, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 554, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .footer .company-name .language-switcher {
   display: flex;
   gap: 10px;
@@ -808,7 +605,7 @@ body {
   padding: 0;
 }
 
-/* line 740, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 562, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .footer .company-name .language-switcher li a {
   display: flex;
   align-items: center;
@@ -816,15 +613,14 @@ body {
   text-decoration: none;
 }
 
-/* line 748, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 570, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .footer .footer-item.footer-item-2 {
   margin-top: 24px;
   margin-bottom: 24px;
 }
 
-/* line 749, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 571, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .footer .footer-item.footer-item-2 p {
-  font-family: Montserrat;
   font-size: 16px;
   font-weight: bold;
   font-stretch: normal;
@@ -835,20 +631,20 @@ body {
   color: #fff;
 }
 
-/* line 759, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 580, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .footer .footer-item.footer-item-2 p span {
   display: block;
   font-weight: normal;
 }
 
-/* line 767, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 588, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .footer .footer-item.footer-item-2 .widget_nav_menu ul {
   list-style: none;
   padding: 0px;
   margin: 0px;
 }
 
-/* line 771, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 592, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .footer .footer-item.footer-item-2 .widget_nav_menu ul a {
   text-decoration: none;
   font-family: Montserrat;
@@ -862,37 +658,37 @@ body {
   color: #fff;
 }
 
-/* line 782, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 603, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .footer .footer-item.footer-item-2 .widget_nav_menu ul a:hover {
   color: #ccaf6f;
 }
 
-/* line 795, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 616, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .footer .elementor-icon-list-item a,
 .footer-bottom .elementor-icon-list-item a {
   transition: 0.3s;
 }
 
-/* line 797, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 618, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .footer .elementor-icon-list-item a:hover,
 .footer-bottom .elementor-icon-list-item a:hover {
   color: #d4ae35 !important;
 }
 
-/* line 799, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 620, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .footer .elementor-icon-list-item a:hover span,
 .footer-bottom .elementor-icon-list-item a:hover span {
   color: #d4ae35 !important;
 }
 
-/* line 806, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 627, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .footer .elementor-icon-box-wrapper .elementor-icon-box-icon,
 .footer-bottom .elementor-icon-box-wrapper .elementor-icon-box-icon {
   padding-top: 4px;
   color: var(--secondary);
 }
 
-/* line 809, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 630, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .footer .elementor-icon-box-wrapper .elementor-icon-box-icon i,
 .footer .elementor-icon-box-wrapper .elementor-icon-box-icon svg,
 .footer-bottom .elementor-icon-box-wrapper .elementor-icon-box-icon i,
@@ -900,19 +696,19 @@ body {
   fill: var(--secondary);
 }
 
-/* line 814, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 635, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .footer .elementor-icon-box-wrapper .elementor-icon-box-content,
 .footer-bottom .elementor-icon-box-wrapper .elementor-icon-box-content {
   display: grid;
 }
 
-/* line 816, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 637, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .footer .elementor-icon-box-wrapper .elementor-icon-box-content .elementor-icon-box-title,
 .footer-bottom .elementor-icon-box-wrapper .elementor-icon-box-content .elementor-icon-box-title {
   font-weight: 700;
 }
 
-/* line 819, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 640, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .footer .elementor-icon-box-wrapper .elementor-icon-box-content .elementor-icon-box-description,
 .footer-bottom .elementor-icon-box-wrapper .elementor-icon-box-content .elementor-icon-box-description {
   order: -1;
@@ -921,7 +717,7 @@ body {
   margin: 0px 0px 5px 0px;
 }
 
-/* line 829, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 650, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .content-wrapper .page-header__title {
   font-family: Montserrat;
   font-size: 30px;
@@ -936,31 +732,31 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 829, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 650, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   .content-wrapper .page-header__title {
     font-size: 24px;
   }
 }
 
-/* line 843, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 664, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .content-wrapper .page-header__title.small-title {
   font-size: 18px;
   margin-top: 18px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 843, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 664, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   .content-wrapper .page-header__title.small-title {
     font-size: 18px;
   }
 }
 
-/* line 852, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 673, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .item-post-img {
   position: relative;
 }
 
-/* line 854, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 675, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .item-post-img > span {
   position: absolute;
   left: 0px;
@@ -978,7 +774,7 @@ body {
   color: #fff;
 }
 
-/* line 869, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 690, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .item-post-img > span span {
   font-family: Roboto;
   font-size: 20px;
@@ -992,7 +788,7 @@ body {
   display: block;
 }
 
-/* line 883, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 704, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .page-thumbnail {
   background-position: center;
   background-repeat: no-repeat;
@@ -1000,12 +796,12 @@ body {
   position: relative;
 }
 
-/* line 888, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 709, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .page-thumbnail .page-header {
   min-height: 422px;
 }
 
-/* line 891, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 712, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .page-thumbnail::after {
   background-color: rgba(178, 71, 46, 0.4);
   position: absolute;
@@ -1017,17 +813,17 @@ body {
   z-index: 1;
 }
 
-/* line 902, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 723, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .item-post {
   margin-bottom: 30px;
 }
 
-/* line 905, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 726, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 a {
   text-decoration: none;
 }
 
-/* line 909, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 730, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .releated-post h4 {
   font-family: Montserrat;
   font-size: 24px;
@@ -1040,7 +836,7 @@ a {
   color: #64070b;
 }
 
-/* line 922, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 743, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .releated-post ul li a {
   font-family: Roboto;
   font-size: 18px;
@@ -1053,14 +849,14 @@ a {
   color: #676767;
 }
 
-/* line 932, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 753, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .releated-post ul li a i {
   color: #64070b;
   margin-right: 12px;
   font-size: 18px;
 }
 
-/* line 942, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 763, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .widget_block h2 {
   font-family: Montserrat;
   font-size: 24px;
@@ -1073,13 +869,13 @@ a {
   color: #64070b;
 }
 
-/* line 955, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 776, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .stt-pagination {
   display: flex;
   justify-content: center;
 }
 
-/* line 959, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 780, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .stt-pagination ul.page-numbers {
   margin: 0;
   border: none;
@@ -1088,24 +884,24 @@ a {
   list-style: none;
 }
 
-/* line 966, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 787, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .stt-pagination ul.page-numbers li {
   border: none;
   margin: 0 10px;
   list-style: none;
 }
 
-/* line 971, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 792, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .stt-pagination ul.page-numbers li:first-child {
   margin-left: 0;
 }
 
-/* line 975, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 796, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .stt-pagination ul.page-numbers li:last-child {
   margin-right: 0;
 }
 
-/* line 979, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 800, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .stt-pagination ul.page-numbers li .page-numbers {
   display: flex;
   width: 26px;
@@ -1119,13 +915,13 @@ a {
   transition: color .15s ease, background-color .15s ease;
 }
 
-/* line 992, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 813, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .stt-pagination ul.page-numbers li .page-numbers.next i, .stt-pagination ul.page-numbers li .page-numbers.prev i {
   font-size: 2.4rem;
   line-height: 1;
 }
 
-/* line 998, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 819, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .stt-pagination ul.page-numbers li .page-numbers.current {
   width: 46px;
   height: 46px;
@@ -1133,220 +929,36 @@ a {
   color: #ffffff;
 }
 
-/* line 1007, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 828, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .stt-pagination ul.page-numbers li:hover .page-numbers:not(.current) {
   background: transparent;
   color: #828282;
 }
 
-/* line 1015, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 836, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .stt-pagination.pagination-left {
   justify-content: flex-start;
 }
 
-/* line 1019, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 840, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .stt-pagination.pagination-right {
   justify-content: flex-end;
 }
 
 @media (max-width: 767px) {
-  /* line 1025, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 846, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   .stt-pagination ul.page-numbers li {
     margin: 0 8px;
   }
-  /* line 1029, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  /* line 850, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
   .stt-pagination ul.page-numbers li .page-numbers.current {
     width: 40px;
     height: 40px;
   }
 }
 
-/* line 1040, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-.widget_recent_entries ul li {
-  display: inline-block;
-}
-
-/* line 1044, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-.widget_recent_entries ul li:not(:last-child) {
-  border-bottom: 1px solid #828282;
-  margin-bottom: 20px;
-}
-
-/* line 1048, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-.widget_recent_entries ul li img {
-  width: 100%;
-}
-
-/* line 1051, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-.widget_recent_entries ul li a {
-  font-size: 18px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.17;
-  letter-spacing: normal;
-  text-align: left;
-  color: #64070b;
-  margin-top: 18px;
-  margin-bottom: 18px;
-  display: block;
-}
-
-/* line 1068, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-.ccv-form-contact label {
-  font-family: Roboto;
-  font-size: 20px;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.45;
-  letter-spacing: normal;
-  text-align: left;
-  color: #838383;
-  display: block;
-}
-
-/* line 1080, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-.ccv-form-contact input, .ccv-form-contact textarea {
-  margin: 13px 0 0px 0;
-  border-radius: 5px;
-  border: solid 0.5px #ccaf6f;
-  background-color: #fff;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  width: 100%;
-}
-
-/* line 1089, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-.ccv-form-contact textarea {
-  height: 182px;
-}
-
-/* line 1092, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-.ccv-form-contact input[type=submit] {
-  padding: 13.7px 62.6px 10.7px 63px;
-  background-color: #64070b;
-  color: #FFF;
-  border-radius: 50px;
-  width: auto;
-  display: inline-block;
-}
-
-/* line 1099, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-.ccv-form-contact input[type=submit]:hover {
-  background-color: #786846;
-}
-
-/* line 1104, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-.ccv_item_service {
-  border: solid 1px #b2b2b2;
-  padding: 38px;
-  position: relative;
-}
-
-/* line 1108, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-.ccv_item_service .item_service_before {
-  position: absolute;
-  width: 7px;
-  height: 76px;
-  background: #ccaf6f;
-  transform: translateY(-50%);
-  top: 50%;
-  left: 0px;
-}
-
-/* line 1117, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-.ccv_item_service .logo {
-  margin-bottom: 27px;
-}
-
-/* line 1121, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-.ccv_item_service .title_service h2 {
-  margin-bottom: 60px;
-  font-family: Montserrat;
-  font-size: 24px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.21;
-  letter-spacing: normal;
-  text-align: center;
-  color: #64070b;
-}
-
-/* line 1134, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-.ccv_item_service .item_description {
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.22;
-  letter-spacing: normal;
-  text-align: left;
-  color: #838383;
-}
-
-/* line 1146, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-.ccv_item_service .item_link a {
-  font-family: Roboto;
-  font-size: 12px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.17;
-  letter-spacing: normal;
-  text-align: left;
-  color: #64070b;
-}
-
-/* line 1156, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-.ccv_item_service .item_link a i {
-  color: #ccaf6f;
-  margin-right: 4px;
-}
-
-/* line 1162, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-.ccv_item_service .item_description {
-  margin-bottom: 18px;
-}
-
-/* line 1169, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-.project__slider-element .item-project .infor h2 {
-  font-family: Montserrat;
-  font-size: 24px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.21;
-  letter-spacing: normal;
-  text-align: left;
-  color: #ccaf6f;
-  margin-top: 20px;
-}
-
-/* line 1182, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-.project__slider-element .item-project .infor ul li {
-  font-family: Roboto;
-  font-size: 20px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.5;
-  letter-spacing: normal;
-  text-align: left;
-  color: #fff;
-  margin-bottom: 12px;
-}
-
-/* line 1193, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
-.project__slider-element .item-project .infor ul li i {
-  color: #ccaf6f;
-  margin-right: 12px;
-}
-
 /* Service Card Styles */
-/* line 1204, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 860, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .service-card {
   background-color: #ffffff;
   border: 1px solid #e5e7eb;
@@ -1357,7 +969,7 @@ a {
   position: relative;
 }
 
-/* line 1212, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 868, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .service-card::before {
   content: "";
   position: absolute;
@@ -1372,22 +984,22 @@ a {
   z-index: 2;
 }
 
-/* line 1225, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 881, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .service-card:hover {
   x-shadow: var(--shadow-xl);
 }
 
-/* line 1227, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 883, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .service-card:hover::before {
   transform: scaleX(1);
 }
 
-/* line 1231, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 887, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .service-card:hover .service-title a {
   color: #ccaf6f;
 }
 
-/* line 1236, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 892, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .service-card .service-icon-box {
   width: 54px;
   height: 54px;
@@ -1398,14 +1010,14 @@ a {
   margin-bottom: 24px;
 }
 
-/* line 1245, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 901, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .service-card .service-icon-box.img-icon img {
   max-width: 32px;
   max-height: 32px;
   object-fit: contain;
 }
 
-/* line 1253, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 909, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .service-card .service-title {
   color: #1f2937;
   font-weight: 700;
@@ -1414,12 +1026,12 @@ a {
   transition: color 0.3s ease;
 }
 
-/* line 1259, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 915, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .service-card .service-title a {
   color: #1f2937;
 }
 
-/* line 1264, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 920, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .service-card .service-description {
   color: #555555;
   font-family: 'Roboto', sans-serif;
@@ -1427,27 +1039,255 @@ a {
   line-height: 1.6;
 }
 
-/* line 1269, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 925, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .service-card .service-description p {
   margin-bottom: 0px;
 }
 
-/* line 1274, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 930, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .service-card .service-card-footer {
   background-color: #f9fafb;
   border-top: 1px solid #f3f4f6;
 }
 
-/* line 1280, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 936, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .service-card .service-features-list li {
   font-weight: 500;
   color: #1f2937;
 }
 
-/* line 1285, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+/* line 941, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 .service-card .service-features-list .checkmark {
   color: #28a745;
   font-size: 14px;
+}
+
+@media (max-width: 991px) {
+  /* line 949, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  .header-inner .navbar-collapse {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: -80%;
+    width: 80%;
+    background: #fff;
+    z-index: 10;
+    height: 100vh;
+    display: block;
+    transition: 0.4s;
+  }
+  /* line 960, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  .header-inner .navbar-collapse.show {
+    right: 0px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  /* line 967, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  body:has(.navbar-collapse.show) {
+    overflow: hidden;
+  }
+  /* line 972, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  #cheng-header .header__center .navbar-collapse {
+    background: #64070b;
+    padding: 20px;
+  }
+  /* line 977, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  #cheng-header .navbar-toggler {
+    padding: 4px 20px 4px 0px;
+  }
+  /* line 979, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  #cheng-header .navbar-toggler:focus, #cheng-header .navbar-toggler:active {
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+  /* line 985, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  #cheng-header .header-main {
+    padding: 0px;
+  }
+  /* line 987, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  #cheng-header .header-main .navbar {
+    padding: 10px;
+    display: inline-block;
+  }
+  /* line 992, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  #cheng-header #primary-menu {
+    margin: 0px;
+  }
+  /* line 994, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  #cheng-header #primary-menu li {
+    padding: 10px 0px 10px 0px;
+  }
+  /* line 996, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  #cheng-header #primary-menu li a {
+    font-size: 16px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ccaf6f;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 768px) {
+  /* line 1011, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  .header-inner {
+    justify-content: space-between;
+  }
+  /* line 1012, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  .header-inner .header__account_menu {
+    margin-left: 12px;
+  }
+  /* line 1017, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  .header-inner .brand__logo img {
+    border-radius: 12px;
+  }
+  /* line 1020, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  .header-inner .brand__logo .brand__text {
+    display: none;
+  }
+  /* line 1024, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  .header-inner #account-menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-direction: row;
+  }
+  /* line 1032, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  .header-inner #account-menu .menu-item {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  /* line 1036, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  .header-inner #account-menu .menu-item:first-child > a {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 5px;
+    border-radius: 8px;
+    color: #0F172A;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    background: transparent;
+    transition: background .25s, color .25s, border-color .25s;
+  }
+  /* line 1047, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  .header-inner #account-menu .menu-item:first-child > a:hover {
+    background: rgba(50, 205, 50, 0.1);
+  }
+  /* line 1051, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  .header-inner #account-menu .menu-item:last-child > a {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 5px;
+    border: 1px solid #D4AE35;
+    border-radius: 8px;
+    color: #111827;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    background: #D4AE35;
+    transition: background .25s, color .25s, box-shadow .25s;
+    box-shadow: 0 2px 8px rgba(212, 174, 53, 0.35);
+  }
+  /* line 1064, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  .header-inner #account-menu .menu-item:last-child > a:hover {
+    background: #b8942a;
+    border-color: #b8942a;
+    box-shadow: 0 4px 16px rgba(212, 174, 53, 0.5);
+  }
+  /* line 1072, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  .header-inner .language-switcher {
+    position: relative;
+    display: inline-block;
+  }
+  /* line 1076, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  .header-inner .language-switcher:hover .language-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  /* line 1083, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  .header-inner .language-current {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: none;
+    padding: 8px 0px;
+    cursor: pointer;
+  }
+  /* line 1091, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  .header-inner .language-current img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  /* line 1096, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  .header-inner .language-current span {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  /* line 1100, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  .header-inner .language-current .arrow {
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #666;
+    border-bottom: 2px solid #666;
+    transform: rotate(45deg);
+    transition: .3s;
+    margin-top: -3px;
+  }
+  /* line 1110, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  .header-inner .language-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    min-width: 120px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+    padding: 8px 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: .25s;
+    z-index: 999;
+  }
+  /* line 1126, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  .header-inner .language-dropdown li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    transition: .25s;
+  }
+  /* line 1134, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  .header-inner .language-dropdown li a:hover {
+    background: #f7f7f7;
+    color: var(--primary-color);
+  }
+  /* line 1138, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  .header-inner .language-dropdown li a img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  /* line 1143, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+  .header-inner .language-dropdown li a span {
+    font-size: 14px;
+    font-weight: 500;
+  }
 }
 
 /*# sourceMappingURL=../css/style.map */
