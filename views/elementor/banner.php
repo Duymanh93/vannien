@@ -1,39 +1,18 @@
 <?php
-if (empty($slide_items)) {
+if (empty($banner_image['url'])) {
     return;
 }
-$slider_show_button = __('Explore','elanding');
+$url = !empty($banner_link['url']) ? $banner_link['url'] : '';
+$is_external = !empty($banner_link['is_external']) ? '_blank' : '_self';
+$nofollow = !empty($banner_link['nofollow']) ? 'rel="nofollow"' : '';
 ?>
-<div id="slider-home" class="home-slider-element home-slider">
-    <?php foreach ($slide_items as $key => $slide) {
-        $background_image_url = !empty($slide['item_slider_image']['url']) ? $slide['item_slider_image']['url'] : '';
-        $slider_show_description = !empty($slide['slider_show_description']) ? $slide['slider_show_description'] : '';
-        
-        $attrs = [
-            'style' => [
-                'background-image: url(' . esc_url($background_image_url) . ')',
-            ]
-        ];
-        ?>
-        <div class="slide-item" data-id="<?php echo esc_attr($slide['_id']) ?>" style="background-image: url('<?php echo esc_url($background_image_url);?> ')">
-            <div class="container">
-                <div class="row slide-content-wrapper">
-                    <div class="col-12 slide-content">
-                        <?php
-                        if (!empty($slide['item_slider_description'])) {
-                            echo '<div class="slide-short-description ' . esc_attr($slider_show_description) . '">' . wp_kses_post($slide['item_slider_description']) . '</div>';
-                        }
-                        $item_slider_link = is_array($slide['item_slider_link']) ? $slide['item_slider_link'] : [];
-                        if (!empty($item_slider_link['url'])) {
-                            $item_slider_url_type = !empty($slide['item_slider_url_type']) ? ($slide['item_slider_url_type']) : '';
-                            $item_slider_url_text = !empty($slide['item_slider_url_text']) ? $slide['item_slider_url_text'] : esc_html__('Explore Now', 'elanding');
-                            echo '<div class="c-button-link"><a href="' . esc_url($item_slider_link['url']) . '" class="slide-link" target="' . esc_attr($item_slider_link['is_external'] ? '_blank' : '') . '">' . esc_html($item_slider_url_text) . '</a></div>';
-                        }
-                        ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <?php
-    } ?>
+<div class="eld-banner-wrapper">
+    <div class="absolute -inset-4 bg-primary/5 rounded-3xl transform rotate-3"></div>
+    <?php if (!empty($url)) : ?>
+        <a href="<?php echo esc_url($url); ?>" target="<?php echo esc_attr($is_external); ?>" <?php echo $nofollow; ?> class="eld-banner-link">
+            <img src="<?php echo esc_url($banner_image['url']); ?>" alt="<?php echo esc_attr(!empty($banner_image['alt']) ? $banner_image['alt'] : 'Banner'); ?>">
+        </a>
+    <?php else : ?>
+        <img src="<?php echo esc_url($banner_image['url']); ?>" alt="<?php echo esc_attr(!empty($banner_image['alt']) ? $banner_image['alt'] : 'Banner'); ?>">
+    <?php endif; ?>
 </div>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* line 1, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
 :root {
   --background: #f9fafb;
@@ -1288,6 +1289,68 @@ a {
     font-size: 14px;
     font-weight: 500;
   }
+}
+
+/* ── ELD Banner Widget Style ────────────────────────────── */
+/* line 1154, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+.eld-banner-wrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+
+/* line 1159, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+.eld-banner-wrapper > div {
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  right: -16px;
+  bottom: -16px;
+  background: #FAF8F2;
+  border-radius: 24px;
+  transform: rotate(3deg);
+  z-index: 1;
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* line 1172, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+.eld-banner-wrapper .eld-banner-link {
+  display: block;
+  position: relative;
+  z-index: 2;
+  text-decoration: none;
+}
+
+/* line 1178, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+.eld-banner-wrapper img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px !important;
+  object-fit: cover;
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.35s ease;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* line 1192, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+.icon-title .elementor-heading-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* line 1196, C:/xampp/htdocs/vannien/wp-content/themes/vannien/assets/scss/style.scss */
+.icon-title .elementor-heading-title:before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  display: block;
+  border-radius: 100%;
+  background-color: var(--secondary);
+  margin-right: 8px;
 }
 
 /*# sourceMappingURL=../css/style.map */

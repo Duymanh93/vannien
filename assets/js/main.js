@@ -72,7 +72,7 @@
     });
 
     $(window).on('elementor/frontend/init', function () {
-        elementorFrontend.hooks.addAction('frontend/element_ready/eld_banner.default', function ($wrapper) {
+        elementorFrontend.hooks.addAction('frontend/element_ready/eld_slide.default', function ($wrapper) {
             cheng_home_slider_element($wrapper);
         });
     });

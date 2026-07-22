@@ -4,19 +4,21 @@ use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 use Elementor\Scheme_Typography;
 use Elementor\Utils;
-if(!class_exists('Elementor_Item_Service_Widget')){
-	class Elementor_Item_Service_Widget extends Elementor\Widget_Base {
+
+if(!class_exists('Elementor_Slide_Widget')){
+	class Elementor_Slide_Widget extends Elementor\Widget_Base {
 
 		public function __construct($data = [], $args = [])
 		{
 		  parent::__construct($data, $args);
 		}
+
 		public function get_name() {
-			return 'eld_service';
+			return 'eld_slide';
 		}
 	
 		public function get_title() {
-			return esc_html__( 'ELD Item Service', 'elanding');
+			return esc_html__( 'ELD Slide', 'elanding');
 		}
 	
 		public function get_icon() {
@@ -35,9 +37,11 @@ if(!class_exists('Elementor_Item_Service_Widget')){
 					'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 				]
 			);
+	
+			$repeater = new \Elementor\Repeater();
             
-            $this->add_control(
-                'item_image',
+            $repeater->add_control(
+                'item_slider_image',
                 [
                     'label' => esc_html__('Image', 'elanding'),
                     'type' => Controls_Manager::MEDIA,
@@ -47,26 +51,16 @@ if(!class_exists('Elementor_Item_Service_Widget')){
                 ]
             );
             
-            $this->add_control(
-                'item_title',
-                [
-                    'label' => esc_html__('Title', 'elanding'),
-                    'type' => Controls_Manager::TEXT,
-                    'label_block' => true,
-                ]
-            );
-
-            $this->add_control(
-                'item_description',
+            $repeater->add_control(
+                'item_slider_description',
                 [
                     'label' => esc_html__('Description Heading', 'elanding'),
                     'type' => Controls_Manager::TEXT,
                     'label_block' => true,
                 ]
             );
-
-			$this->add_control(
-                'item_link',
+			$repeater->add_control(
+                'item_slider_link',
                 [
                     'label' => esc_html__('Link', 'elanding'),
                     'type' => Controls_Manager::URL,
@@ -80,28 +74,28 @@ if(!class_exists('Elementor_Item_Service_Widget')){
                 ]
             );
             
-	
 			$this->add_control(
 				'slide_items',
 				[
-					'label'       => esc_html__('List Slider', 'go-now'),
+					'label'       => esc_html__('List Slider', 'elanding'),
 					'type'        => Controls_Manager::REPEATER,
 					'label_block' => true,
-					'fields'      => $this->get_controls(),
+					'fields'      => $repeater->get_controls(),
 					'title_field' => '{{{ item_slider_description }}}',
 				]
 			);
 	
-			
 			$this->end_controls_section();
 		}
 	
 		protected function render() {
 			$settings = $this->get_settings_for_display();
-            
-            $settings = array_merge($settings, array('_element' => $this));
+			$this->add_inline_editing_attributes( 'description_box', 'advanced' );
+			$settings = array(
+				'slide_items' => $settings['slide_items'],
+			);
 	
-			echo elanding_load_template('elementor/item_service','', $settings);
+			echo elanding_load_template('elementor/slide','', $settings);
 		}
 	
 		protected function content_template(){
